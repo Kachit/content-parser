@@ -1,0 +1,2 @@
+# Simple content parser skeleton
+````
