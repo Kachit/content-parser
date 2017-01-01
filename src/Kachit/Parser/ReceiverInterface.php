@@ -9,7 +9,7 @@ namespace Kachit\Parser;
 interface ReceiverInterface
 {
     /**
-     * @param DataInterface $data
+     * @param ResultInterface $data
      */
-    public function receive(DataInterface $data);
+    public function receive(ResultInterface $data);
 }

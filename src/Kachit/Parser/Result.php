@@ -6,7 +6,7 @@
  */
 namespace Kachit\Parser;
 
-class Data implements DataInterface
+class Result implements DataInterface
 {
     /**
      * @var array

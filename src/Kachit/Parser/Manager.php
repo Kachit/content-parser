@@ -47,11 +47,11 @@ class Manager
         if (empty($content)) {
             throw new Exception('Nothing to parse');
         }
-        $data = $this->parser->parse($content);
-        if ($data->isEmpty()) {
+        $result = $this->parser->parse($content);
+        if ($result->isEmpty()) {
             throw new Exception('Nothing to receive');
         }
-        $this->receiver->receive($data);
+        $this->receiver->receive($result);
     }
 
     /**

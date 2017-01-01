@@ -6,7 +6,7 @@
  */
 namespace Kachit\Parser;
 
-interface DataInterface
+interface ResultInterface
 {
     /**
      * @return array
@@ -15,7 +15,7 @@ interface DataInterface
 
     /**
      * @param mixed $data
-     * @return DataInterface
+     * @return ResultInterface
      */
     public function setData($data);
 

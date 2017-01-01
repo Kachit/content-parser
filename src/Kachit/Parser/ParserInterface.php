@@ -10,7 +10,7 @@ interface ParserInterface
 {
     /**
      * @param mixed $content
-     * @return DataInterface
+     * @return ResultInterface
      */
     public function parse($content);
 }
