@@ -17,12 +17,12 @@ class Http extends LoaderAbstract
     private $httpClient;
 
     /**
-     * LoaderAbstract constructor.
-     * @param array $options
+     * Http constructor.
+     * @param HttpClient $httpClient
      */
-    public function __construct(array $options = [])
+    public function __construct(HttpClient $httpClient = null)
     {
-        $this->httpClient = new HttpClient($options);
+        $this->httpClient = ($httpClient) ? $httpClient : new HttpClient();
     }
 
     /**
