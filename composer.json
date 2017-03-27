@@ -1,13 +1,13 @@
 {
   "name": "kachit/parser-skeleton",
   "description": "Simple content parser skeleton",
-  "license": "proprietary",
+  "license": "MIT",
   "require": {
     "php": ">=5.5",
     "fabpot/goutte": "3.2.*"
   },
   "require-dev": {
-    "codeception/codeception": ">=2.2 <2.2.7"
+    "codeception/codeception": "2.2.*"
   },
   "autoload": {
     "psr-4": {
