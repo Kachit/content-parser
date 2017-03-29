@@ -15,6 +15,7 @@ class SimpleXML extends AdapterAbstract
      */
     public function build($content)
     {
+        libxml_use_internal_errors(true);
         $xml = simplexml_load_string($content, 'SimpleXMLElement', LIBXML_NOCDATA);
         if (empty($xml)) {
             throw new \Exception('Invalid content');
