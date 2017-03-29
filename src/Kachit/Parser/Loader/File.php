@@ -11,15 +11,6 @@ use Kachit\Parser\LoaderAbstract;
 class File extends LoaderAbstract
 {
     /**
-     * LoaderAbstract constructor.
-     * @param array $options
-     */
-    public function __construct(array $options = [])
-    {
-
-    }
-
-    /**
      * @param string $path
      * @param array $params
      * @return string

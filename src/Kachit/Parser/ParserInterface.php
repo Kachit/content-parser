@@ -9,8 +9,8 @@ namespace Kachit\Parser;
 interface ParserInterface
 {
     /**
-     * @param mixed $content
-     * @return ResultInterface
+     * @param $content
+     * @return mixed
      */
     public function parse($content);
 }

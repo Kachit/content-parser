@@ -23,4 +23,15 @@ interface ResultInterface
      * @return bool
      */
     public function isEmpty();
+
+    /**
+     * @return string
+     */
+    public function getSource();
+
+    /**
+     * @param string $source
+     * @return ResultInterface
+     */
+    public function setSource($source);
 }

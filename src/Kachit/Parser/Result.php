@@ -14,6 +14,11 @@ class Result implements ResultInterface
     private $data = [];
 
     /**
+     * @var string
+     */
+    private $source = '';
+
+    /**
      * Data constructor.
      * @param array $data
      */
@@ -46,5 +51,23 @@ class Result implements ResultInterface
     public function isEmpty()
     {
         return empty($this->data);
+    }
+
+    /**
+     * @return string
+     */
+    public function getSource()
+    {
+        return $this->source;
+    }
+
+    /**
+     * @param string $source
+     * @return Result
+     */
+    public function setSource($source)
+    {
+        $this->source = $source;
+        return $this;
     }
 }

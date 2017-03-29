@@ -12,5 +12,5 @@ interface AdapterInterface
      * @param string $content
      * @return mixed
      */
-    public function parse($content);
+    public function build($content);
 }

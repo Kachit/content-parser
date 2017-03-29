@@ -8,13 +8,13 @@ namespace Kachit\Parser\Adapter;
 
 use Symfony\Component\DomCrawler\Crawler;
 
-class SymfonyCrawler implements AdapterInterface
+class SymfonyCrawler extends AdapterAbstract
 {
     /**
      * @param string $content
      * @return mixed|Crawler
      */
-    public function parse($content)
+    public function build($content)
     {
         $crawler = new Crawler();
         $crawler->addContent($content);

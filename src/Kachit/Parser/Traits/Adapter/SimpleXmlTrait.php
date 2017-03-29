@@ -1,14 +1,16 @@
 <?php
-/**
- * Class SymfonyCrawlerTrait
- * @package Kachit\Parser\Traits\Adapter
- * @author Kachit
- */
 namespace Kachit\Parser\Traits\Adapter;
 
 use Kachit\Parser\Adapter\AdapterInterface;
 use Kachit\Parser\Adapter\SimpleXML;
 
+/**
+ * Class SimpleXmlTrait
+ * @package Kachit\Parser\Traits\Adapter
+ * @author Kachit
+ *
+ * @property array $settings
+ */
 trait SimpleXmlTrait
 {
     /**
@@ -16,6 +18,6 @@ trait SimpleXmlTrait
      */
     protected function getAdapter()
     {
-        return new SimpleXML();
+        return new SimpleXML($this->settings);
     }
 }

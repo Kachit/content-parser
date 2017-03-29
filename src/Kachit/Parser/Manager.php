@@ -51,7 +51,7 @@ class Manager
         if ($result->isEmpty()) {
             throw new Exception('Nothing to receive');
         }
-        $this->receiver->receive($result);
+        $this->receiver->receive($result->setSource($path));
     }
 
     /**

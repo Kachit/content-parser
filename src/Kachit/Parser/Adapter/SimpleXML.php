@@ -6,14 +6,14 @@
  */
 namespace Kachit\Parser\Adapter;
 
-class SimpleXML implements AdapterInterface
+class SimpleXML extends AdapterAbstract
 {
     /**
      * @param string $content
      * @return \SimpleXMLElement
      * @throws \Exception
      */
-    public function parse($content)
+    public function build($content)
     {
         $xml = simplexml_load_string($content, 'SimpleXMLElement', LIBXML_NOCDATA);
         if (empty($xml)) {

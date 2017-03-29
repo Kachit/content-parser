@@ -21,10 +21,18 @@ abstract class ParserAbstract implements ParserInterface
     protected $result;
 
     /**
-     * ParserAbstract constructor.
+     * @var array
      */
-    public function __construct()
+    protected $settings = [];
+
+    /**
+     * ParserAbstract constructor
+     *
+     * @param array $settings
+     */
+    public function __construct(array $settings = [])
     {
+        $this->settings = $settings;
         $this->adapter = $this->getAdapter();
         $this->result = new Result();
     }
@@ -35,7 +43,6 @@ abstract class ParserAbstract implements ParserInterface
      */
     public function parse($content)
     {
-        $content = $this->adapter->parse($content);
         $content = $this->parseContent($content);
         return $this->result->setData($content);
     }

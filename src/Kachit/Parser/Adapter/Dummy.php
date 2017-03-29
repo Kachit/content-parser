@@ -6,13 +6,13 @@
  */
 namespace Kachit\Parser\Adapter;
 
-class Dummy implements AdapterInterface
+class Dummy extends AdapterAbstract
 {
     /**
      * @param string $content
      * @return mixed
      */
-    public function parse($content)
+    public function build($content)
     {
         return $content;
     }
